@@ -1,0 +1,101 @@
+when users enter a link examples /carlbbb /julian /etc
+
+checks the database if that link is valid
+if valid creates a webpage with there username,
+and makes a website based off the values and objects in the database.
+
+
+
+
+CREATING AN ACCOUNT
+    sign up page: gets users: email, password, username, enters that into database at the main object
+        when sign up they can use /edit
+        in /edit they can edit there website
+        like adding links
+        changing background colors
+
+
+
+figure out what useState useEffect does
+
+
+        <div>
+            <input placeholder="Email..." 
+                onChange={(e) => setEmail(e.target.value)}
+            />
+            <input placeholder="Password ..." 
+                onChange={(e) => setPassword(e.target.value)}
+                type="password"
+            />
+            <button onClick={signIn}>Sign Up</button>
+            <button onClick={LogOut}>Log Out</button>
+        </div>
+
+
+
+First make a log in page and sign up page  
+    log in page is already done 
+        needs to have validation like 
+            if the account is already made says account is already made
+            or if there is not @ 
+            or if the password is to small 
+            if the email is to short or onyly contains numbers
+    
+    make a different sign up page than log in page
+    maybe just need to watch a tutorial on it on youtube
+
+Do more research on reactjs figure out what useState and useEffect those 
+
+need more learning on firebase and the firestore database
+
+ideas for firebase 
+    for every user created with sign up they make a document
+        inside the document there is a collection inside the collection
+            email  
+                to probably check if the account is already made
+            background color
+                can have a wide range of color
+                    or a color like rgb thing to pick what color they want to have 
+                color for the link
+                    extra color for the border of the links
+            img for profile picture image
+            Name = for the main title in the page
+            Description for the Description in the static page
+
+idea 
+
+    make the sign up page require
+        email
+        password
+        username
+    
+    username is going to be /{username} when linked is type
+
+    if its type with /{username} that is valid its goign to create a static page based on the values given in the firebase database
+    if some values are not added yet
+        like links
+            will be empty
+    
+when a user has created an account succesfully they can enter /edit
+
+if not they will be blocked out
+
+/edit is where they can add links change there name description and name and profile picture.
+
+
+for example in my database i have
+    carlBBB {
+        username: carlbbb,
+        email: Carlgbt@gmail.com,
+        description: Web Developer,
+        profilePicture: myPfp.jpg,
+
+        Links [
+            title: my amazon wishlist {link: www.amazon.com},
+            title: My tiktok {link: www.tiktok.com},
+            title: onlyfans {link: www.onlyfans.com}
+        ]
+    }
+
+text-center rounded-md py-4 px-4 bg-lime-700
+text-center rounded-md py-4 px-4 bg-red-500
